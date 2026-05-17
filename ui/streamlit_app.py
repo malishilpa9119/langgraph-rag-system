@@ -53,7 +53,7 @@ def call_query(question: str) -> dict[str, Any]:
 
 
 def call_documents() -> dict[str, Any]:
-    resp = requests.get(f"{API_BASE}/documents", timeout=30)
+    resp = requests.get(f"{API_BASE}/documents", timeout=120)
     resp.raise_for_status()
     return resp.json()
 
